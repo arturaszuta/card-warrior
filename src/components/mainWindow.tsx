@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from 'react-redux';
+import GameMenu from "./GameMenu";
 
 const MainWindow = (props: any) => {
     console.log(props);
     return(
         <div>
-            I'm the main window!
+            <GameMenu />
         </div>
     )
 }
