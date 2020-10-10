@@ -4,7 +4,11 @@ import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
 
 const MainWindow = (props: any) => {
-    console.log(props);
+    const  doMagic = (fullpageApi: any) => {
+        fullpageApi.silentMoveTo(1)
+        // return <div className="section">Oh lalala</div>
+    }
+
     return(
         <ReactFullPage
             //fullpage options
@@ -18,8 +22,16 @@ const MainWindow = (props: any) => {
                     <GameMenu moveDown={() => {fullpageApi.moveSectionDown(); fullpageApi.setAllowScrolling(false, 'up'); fullpageApi.setKeyboardScrolling(false);}}/>
                 </div>
                 <div className="section">
-                    <p>Section 2</p>
+                    <div className="slide">
+                        <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
+                        Game Area
+                    </div>
+                    <div className="slide">
+                        <button onClick={() => fullpageApi.moveSlideLeft()}>Go to staging area</button>
+                        Game Area
+                    </div>
                 </div>
+
                 </ReactFullPage.Wrapper>
             );
             }}
