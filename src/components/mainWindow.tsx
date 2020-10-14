@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
+import GameCard from "./GameCard";
 
 const MainWindow = (props: any) => {
     const  doMagic = (fullpageApi: any) => {
@@ -22,9 +23,18 @@ const MainWindow = (props: any) => {
                     <GameMenu moveDown={() => {fullpageApi.moveSectionDown(); fullpageApi.setAllowScrolling(false, 'up'); fullpageApi.setKeyboardScrolling(false);}}/>
                 </div>
                 <div className="section">
-                    <div className="slide">
+                    <div className="slide cardArea">
                         <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
-                        Game Area
+                            <div className="cardAreaWrapper">
+                                <div className="heroWrapper">
+                                    <GameCard />
+                                </div>
+                                <div className="cardWrapper">
+                                    <GameCard />
+                                    <GameCard />
+                                    <GameCard />
+                                </div>
+                            </div>
                     </div>
                     <div className="slide">
                         <button onClick={() => fullpageApi.moveSlideLeft()}>Go to staging area</button>
