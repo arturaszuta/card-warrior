@@ -3,12 +3,17 @@ import { connect } from 'react-redux';
 import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
 import GameCard from "./GameCard";
+import {useSpring, animated, config} from 'react-spring'
+
+
 
 const MainWindow = (props: any) => {
     const  doMagic = (fullpageApi: any) => {
         fullpageApi.silentMoveTo(1)
         // return <div className="section">Oh lalala</div>
     }
+
+    useSpring({config: config.default })
 
     return(
         <ReactFullPage
