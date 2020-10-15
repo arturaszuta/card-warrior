@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
 import GameCard from "./GameCard";
-import {useSpring, animated, config} from 'react-spring'
+import BarGraph from "./BarGraph";
+
 
 
 
@@ -13,7 +14,7 @@ const MainWindow = (props: any) => {
         // return <div className="section">Oh lalala</div>
     }
 
-    useSpring({config: config.default })
+
 
     return(
         <ReactFullPage
@@ -32,6 +33,7 @@ const MainWindow = (props: any) => {
                         <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
                             <div className="cardAreaWrapper">
                                 <div className="heroWrapper">
+                                    <BarGraph />
                                     <GameCard />
                                 </div>
                                 <div className="cardWrapper">
