@@ -4,6 +4,7 @@ import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
 import GameCard from "./GameCard";
 import BarGraph from "./BarGraph";
+import SampleStack from "./sampleReactStack";
 
 
 
@@ -31,6 +32,7 @@ const MainWindow = (props: any) => {
                 <div className="section">
                     <div className="slide cardArea">
                         <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
+                        <button onClick={() => fullpageApi.moveSectionDown()}>Go to game area</button>
                             <div className="cardAreaWrapper">
                                 <div className="heroWrapper">
                                     <BarGraph />
@@ -47,6 +49,9 @@ const MainWindow = (props: any) => {
                         <button onClick={() => fullpageApi.moveSlideLeft()}>Go to staging area</button>
                         Game Area
                     </div>
+                </div>
+                <div className="section">
+                    <SampleStack />
                 </div>
 
                 </ReactFullPage.Wrapper>
