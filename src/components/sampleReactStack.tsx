@@ -11,8 +11,9 @@ import { SizeMe } from "react-sizeme";
 const SampleStack = (props:any) => {
 
     const { containerWidth } =  props;
-    const width = containerWidth / 10;
+    const width = Math.ceil(containerWidth / 10) - 20;
     console.log("THIS IS WIDTH",Math.ceil(width))
+    console.log(typeof(width))
 
     const Card = styled.div`
   font-size: 1.5em;
@@ -29,7 +30,7 @@ const allCards = cardArray.map(e => <Card />)
            
     return (
       <StackGrid
-        columnWidth={150}
+        columnWidth={"10%"}
         >
           {allCards}
       </StackGrid>
