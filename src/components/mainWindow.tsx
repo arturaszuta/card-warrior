@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import GameMenu from "./GameMenu";
 import ReactFullPage from "@fullpage/react-fullpage";
 import GameCard from "./GameCard";
-import BarGraph from "./BarGraph";
 import SampleStack from "./sampleReactStack";
+import SizedContainer from "./SizedContainer";
 
 
 
@@ -14,6 +14,8 @@ const MainWindow = (props: any) => {
         fullpageApi.silentMoveTo(1)
         // return <div className="section">Oh lalala</div>
     }
+
+
 
 
 
@@ -34,15 +36,9 @@ const MainWindow = (props: any) => {
                         <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
                         <button onClick={() => fullpageApi.moveSectionDown()}>Go to game area</button>
                             <div className="cardAreaWrapper">
-                                <div className="heroWrapper">
-                                    <BarGraph />
-                                    <GameCard />
-                                </div>
-                                <div className="cardWrapper">
-                                    <GameCard />
-                                    <GameCard />
-                                    <GameCard />
-                                </div>
+                                <SizedContainer>
+                                </SizedContainer>
+                                    {/* <SampleStack /> */}
                             </div>
                     </div>
                     <div className="slide">
@@ -50,9 +46,9 @@ const MainWindow = (props: any) => {
                         Game Area
                     </div>
                 </div>
-                <div className="section">
-                    <SampleStack />
-                </div>
+                {/* <div className="section">
+                    This is section?
+                </div> */}
 
                 </ReactFullPage.Wrapper>
             );

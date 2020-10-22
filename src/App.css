@@ -26,9 +26,9 @@
   height: 80%;
   border: 2px solid blue;
   margin: 0% 10%;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
 }
 
 .heroWrapper {
