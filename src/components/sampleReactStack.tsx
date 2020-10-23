@@ -12,8 +12,6 @@ const SampleStack = (props:any) => {
 
     const { containerWidth } =  props;
     const width = Math.ceil(containerWidth / 10) - 20;
-    console.log("THIS IS WIDTH",Math.ceil(width))
-    console.log(typeof(width))
 
     const Card = styled.div`
   font-size: 1.5em;
@@ -25,8 +23,9 @@ const SampleStack = (props:any) => {
 `;
 
     
-const cardArray = Array.from(Array(81).keys())
-const allCards = cardArray.map(e => <Card />)
+const cardArray = Array.from(Array(40).keys())
+console.log(cardArray)
+const allCards = cardArray.map(e => <Card key={e}/>)
            
     return (
       <StackGrid
