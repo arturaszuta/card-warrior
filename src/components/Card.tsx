@@ -10,6 +10,8 @@ const Card = (props:any) => {
                 {props.index}
                 <br></br>
                 {props.row}
+                <br></br>
+                {props.column}
             </Paper>
         </Grid>
     )

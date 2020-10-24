@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Grid } from "@material-ui/core";
 import Card from "./Card";
+import { columnMatrix } from "../helpers/columnMatrix";
 
 interface IDungeonProps {
     size: string;
@@ -60,13 +61,20 @@ const Dungeon = (props:IDungeonProps) => {
         return row;
     }
 
+    const getColumn = (index:number) => {
+        const stringIndex = index.toString();
+        return columnMatrix[stringIndex].val;
+    }
+ 
+
     BuildDungeon(size);
 
 
     const cardArray = Array.from(Array(sizeCount).keys());
     const allCards = cardArray.map((e, index) => {
         const row = getRow(index);
-        return <Card key={index} index={index} active={mainState.activeIndex == index ? true : false} setActiveIndex={setActiveIndex} row={row}/>
+        const column = getColumn(index);
+        return <Card key={index} index={index} active={mainState.activeIndex == index ? true : false} setActiveIndex={setActiveIndex} row={row} column={column}/>
     })
 
     return(
