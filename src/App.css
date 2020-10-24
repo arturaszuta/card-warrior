@@ -85,10 +85,14 @@ html, body, #app, #app>div, #root {
 .gridCard {
   width: 20%;
   height: 125px;
-  transition: transform .4s;
+  transition: transform .3s;
 }
 
 .gridCard:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.active {
+  background-color: pink;
 }
