@@ -83,7 +83,7 @@ html, body, #app, #app>div, #root {
 }
 
 .gridCard {
-  width: 18%;
+  width: 20%;
   height: 125px;
   transition: transform .4s;
 }

@@ -24,8 +24,7 @@ const SampleStack = (props:any) => {
 
     
 const cardArray = Array.from(Array(40).keys())
-console.log(cardArray)
-const allCards = cardArray.map(e => <Card key={e}/>)
+const allCards = cardArray.map((e, index) => <Card key={e} />)
            
     return (
       <StackGrid
