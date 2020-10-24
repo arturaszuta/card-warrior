@@ -72,3 +72,9 @@ html, body, #app, #app>div, #root {
 .dungeon-wrapper {
   text-align: center;
 }
+
+.card {
+  width: 18%;
+  height: 125px;
+  border: 1px solid black;
+}
