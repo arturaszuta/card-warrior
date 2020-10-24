@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import Card from "./Card";
 
 interface IDungeon {
@@ -25,10 +25,9 @@ const Dungeon = (props:IDungeon) => {
     const allCards = cardArray.map(e => <Card key={e}/>)
 
     return(
-        <Container className="dungeon-wrapper" maxWidth="md">
-            <p>Badass dungeon!</p>
+        <Grid className="dungeon-wrapper" spacing={2} container>
             {allCards}
-        </Container>
+        </Grid>
     )
 }
 

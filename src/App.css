@@ -71,10 +71,24 @@ html, body, #app, #app>div, #root {
 
 .dungeon-wrapper {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 50px;
 }
 
 .card {
+  width: 100%;
+  height: 100%;
+}
+
+.gridCard {
   width: 18%;
   height: 125px;
-  border: 1px solid black;
+  transition: transform .4s;
+}
+
+.gridCard:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }

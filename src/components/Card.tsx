@@ -1,6 +1,6 @@
 import React from "react";
 import  styled  from "styled-components";
-import { Paper } from "@material-ui/core";
+import { Paper, Grid } from "@material-ui/core";
 
 const Card = () => {
 
@@ -14,9 +14,11 @@ const Card = () => {
   `;
   
     return(
-        <Paper className="card">
-            I'm a card!
-        </Paper>
+        <Grid item className="gridCard">
+            <Paper className="card" elevation={12}>
+                I'm a card!
+            </Paper>
+        </Grid>
     )
 }
 

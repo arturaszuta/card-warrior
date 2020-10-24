@@ -57,7 +57,6 @@ const MainWindow = (props: any) => {
         //     }}
         // />
         <Container className="main-game-container" maxWidth="lg">
-            I'm the game container!
             <Dungeon size="small" />
         </Container>
 
