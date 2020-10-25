@@ -99,4 +99,5 @@ html, body, #app, #app>div, #root {
 
 .unreachable {
   background-color: red;
+  color: red;
 }
