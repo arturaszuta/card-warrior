@@ -25,21 +25,6 @@ const Dungeon = (props:IDungeonProps) => {
         setMainState({...mainState, activeIndex: index, activeColumn: column, activeRow: row});
     }
 
-    // const setActiveIndex = (index: number) => {
-    //     console.log("Setting Active Index", index)
-    //     setMainState({...mainState, activeIndex: index});
-    // }
-
-    // const setActiveRow = (row: number) => {
-    //     console.log("Setting Active row", row)
-    //     setMainState({...mainState, activeRow: row});
-    // }
-
-    // const setActiveColumn = (column: number) => {
-    //     console.log("Setting Active column", column)
-    //     setMainState({...mainState, activeColumn: column});
-    // }
-
     const getRow = (index: number) => {
         let row = 0;
         const dividedIndex = index / 5;
