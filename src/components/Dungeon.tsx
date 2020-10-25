@@ -21,17 +21,24 @@ const Dungeon = (props:IDungeonProps) => {
         }
     }
     
-    const setActiveIndex = (index: number) => {
-        setMainState({...mainState, activeIndex: index});
+    const setActiveCard = (index: number, row: number, column: number) => {
+        setMainState({...mainState, activeIndex: index, activeColumn: column, activeRow: row});
     }
 
-    const setActiveRow = (row: number) => {
-        setMainState({...mainState, activeRow: row});
-    }
+    // const setActiveIndex = (index: number) => {
+    //     console.log("Setting Active Index", index)
+    //     setMainState({...mainState, activeIndex: index});
+    // }
 
-    const setActiveColumn = (column: number) => {
-        setMainState({...mainState, activeColumn: column});
-    }
+    // const setActiveRow = (row: number) => {
+    //     console.log("Setting Active row", row)
+    //     setMainState({...mainState, activeRow: row});
+    // }
+
+    // const setActiveColumn = (column: number) => {
+    //     console.log("Setting Active column", column)
+    //     setMainState({...mainState, activeColumn: column});
+    // }
 
     const getRow = (index: number) => {
         let row = 0;
@@ -83,18 +90,21 @@ const Dungeon = (props:IDungeonProps) => {
         const row = getRow(index);
         const column = getColumn(index);
         let reachable = false;
-        if (mainState.activeIndex == -1 && row == 1) {{
+        if (mainState.activeIndex == -1 && row == 1) {
             reachable = true;
-        }}
+        } else if(row - mainState.activeRow == 1 && (column == mainState.activeColumn || column == mainState.activeColumn + 1 || column == mainState.activeColumn - 1) ) {
+            reachable = true;
+        }
         return (<Card 
             key={index} 
             index={index} 
             active={mainState.activeIndex == index ? true : false} 
             row={row} 
             column={column} 
-            setActiveIndex={setActiveIndex} 
-            setActiveColumn={setActiveColumn} 
-            setActiveRow={setActiveRow}
+            // setActiveIndex={setActiveIndex} 
+            // setActiveColumn={setActiveColumn} 
+            // setActiveRow={setActiveRow}
+            setActiveCard={setActiveCard}
             reachable={reachable}
 
         />)
