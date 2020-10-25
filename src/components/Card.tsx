@@ -2,16 +2,16 @@ import React from "react";
 import { Paper, Grid } from "@material-ui/core";
 
 const Card = (props:any) => {
-    const { active } = props;
+    const { active, row, column, setActiveIndex, setActiveRow, setActivecolumn, index, reachable } = props;
   
     return(
-        <Grid item className={`gridCard ${props.active == true ? "active" : ""}`} onClick={() => {props.setActiveIndex(props.index)}}>
-            <Paper className="card" elevation={12}  >
-                {props.index}
+        <Grid item className={`gridCard ${active == true ? "active" : ""}`} onClick={() => {setActiveIndex(index)}}>
+            <Paper className={`card ${reachable ? "reachable" : "unreachable"}`} elevation={12}  >
+                {index}
                 <br></br>
-                {props.row}
+                {row}
                 <br></br>
-                {props.column}
+                {column}
             </Paper>
         </Grid>
     )

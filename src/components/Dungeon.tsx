@@ -11,7 +11,7 @@ interface IDungeonProps {
 const Dungeon = (props:IDungeonProps) => {
     const { size } = props;
     let sizeCount = 0;
-    const [mainState, setMainState] = useState({activeIndex: -1});
+    const [mainState, setMainState] = useState({activeIndex: -1, activeRow: -1, activeColumn: -1});
 
     const BuildDungeon = (size: string) => {
         switch(size) {
@@ -23,6 +23,14 @@ const Dungeon = (props:IDungeonProps) => {
     
     const setActiveIndex = (index: number) => {
         setMainState({...mainState, activeIndex: index});
+    }
+
+    const setActiveRow = (row: number) => {
+        setMainState({...mainState, activeRow: row});
+    }
+
+    const setActiveColumn = (column: number) => {
+        setMainState({...mainState, activeColumn: column});
     }
 
     const getRow = (index: number) => {
@@ -74,7 +82,22 @@ const Dungeon = (props:IDungeonProps) => {
     const allCards = cardArray.map((e, index) => {
         const row = getRow(index);
         const column = getColumn(index);
-        return <Card key={index} index={index} active={mainState.activeIndex == index ? true : false} setActiveIndex={setActiveIndex} row={row} column={column}/>
+        let reachable = false;
+        if (mainState.activeIndex == -1 && row == 1) {{
+            reachable = true;
+        }}
+        return (<Card 
+            key={index} 
+            index={index} 
+            active={mainState.activeIndex == index ? true : false} 
+            row={row} 
+            column={column} 
+            setActiveIndex={setActiveIndex} 
+            setActiveColumn={setActiveColumn} 
+            setActiveRow={setActiveRow}
+            reachable={reachable}
+
+        />)
     })
 
     return(
