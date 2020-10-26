@@ -67,6 +67,10 @@ html, body, #app, #app>div, #root {
 
 .main-game-container {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 60%;
 }
 
 .dungeon-wrapper {
@@ -116,4 +120,28 @@ cursor: not-allowed;
 
 .complete {
   visibility: hidden;
+}
+
+.characterTab {
+  background-color: pink;
+  height: 100%;
+  width: 20%;
+}
+
+.extraTab {
+  background-color: mediumaquamarine;
+  height: 100%;
+  width: 20%;
+}
+
+.dungeonTab{ 
+  margin: 0;
+  width: 20%;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }

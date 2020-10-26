@@ -5,7 +5,7 @@ import ReactFullPage from "@fullpage/react-fullpage";
 import GameCard from "./GameCard";
 import SampleStack from "./sampleReactStack";
 import SizedContainer from "./SizedContainer";
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import  Dungeon  from "./Dungeon";
 
 
@@ -56,11 +56,17 @@ const MainWindow = (props: any) => {
         //     );
         //     }}
         // />
-        <Container className="main-game-container" maxWidth="lg">
-            <Dungeon size="small" />
-        </Container>
+        <div className="mainWrapper">
+                <Container className="characterTab" >
+                </Container>
+                <Container className="main-game-container" maxWidth="lg" style={{ width: "160%"}}>
+                    <Dungeon size="small" />
+                </Container>
+                <Container className="extraTab" >
+                </Container>
+        </div>
 
-    )
+)
 }
 
 const mapStateToProps = (state: any /*, ownProps*/) => {
