@@ -8,7 +8,9 @@ const Card = (props:any) => {
         column, 
         setActiveCard, 
         index, 
-        reachable } = props;
+        reachable,
+        complete
+     } = props;
 
     const useStyles = makeStyles(theme => ({
         paperRoot: {
@@ -19,7 +21,7 @@ const Card = (props:any) => {
       const classes = useStyles();
   
     return(
-        <Grid item className={`gridCard ${active == true ? "active" : ""}`} onClick={() => {
+        <Grid item className={`gridCard ${active == true ? "active" : ""} ${complete ? "complete" : ""}`} onClick={() => {
             if(reachable) {setActiveCard(index, row, column)}
         }}
         >

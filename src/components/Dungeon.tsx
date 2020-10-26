@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, makeStyles } from "@material-ui/core";
 import Card from "./Card";
 import { columnMatrix } from "../helpers/columnMatrix";
+import ActionArea from "./ActionArea";
 
 interface IDungeonProps {
     size: string;
@@ -11,7 +12,7 @@ interface IDungeonProps {
 const Dungeon = (props:IDungeonProps) => {
     const { size } = props;
     let sizeCount = 0;
-    const [mainState, setMainState] = useState({activeIndex: -1, activeRow: -1, activeColumn: -1});
+    const [mainState, setMainState] = useState({activeIndex: -1, activeRow: -1, activeColumn: -1, actionCardVisible: false, completeCardIndexes: [-1]});
 
     const BuildDungeon = (size: string) => {
         switch(size) {
@@ -22,8 +23,22 @@ const Dungeon = (props:IDungeonProps) => {
     }
     
     const setActiveCard = (index: number, row: number, column: number) => {
-        setMainState({...mainState, activeIndex: index, activeColumn: column, activeRow: row});
+        setMainState({...mainState, activeIndex: index, activeColumn: column, activeRow: row, actionCardVisible: true});
     }
+
+    const closeActionArea = () => {
+        const currentCompleteIndexes = [...mainState.completeCardIndexes];
+        currentCompleteIndexes.push(mainState.activeIndex);
+        setMainState({...mainState, actionCardVisible: false, completeCardIndexes: [...currentCompleteIndexes]});
+    }
+
+    const useStyles = makeStyles(theme => ({
+        containerRoor: {
+          backgroundColor: "lime"
+        }
+      }));
+
+      const classes = useStyles();
 
     const getRow = (index: number) => {
         let row = 0;
@@ -86,17 +101,16 @@ const Dungeon = (props:IDungeonProps) => {
             active={mainState.activeIndex == index ? true : false} 
             row={row} 
             column={column} 
-            // setActiveIndex={setActiveIndex} 
-            // setActiveColumn={setActiveColumn} 
-            // setActiveRow={setActiveRow}
             setActiveCard={setActiveCard}
             reachable={reachable}
+            complete={mainState.completeCardIndexes.includes(index) ? true : false }
 
         />)
     })
 
     return(
         <Grid className="dungeon-wrapper" spacing={2} container>
+            <ActionArea closeActionArea={closeActionArea} hidden={mainState.actionCardVisible}/>
             {allCards}
         </Grid>
     )
