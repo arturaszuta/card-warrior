@@ -123,9 +123,9 @@ cursor: not-allowed;
 }
 
 .characterTab {
-  background-color: pink;
   height: 100%;
   width: 20%;
+  border: 1px solid black;
 }
 
 .extraTab {
@@ -144,4 +144,36 @@ cursor: not-allowed;
   flex-direction: row;
   height: 100%;
   width: 100%;
+}
+
+.leftSidebar {
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+
+.statsContainer {
+  width: 100%;
+  height: 300px;
+}
+
+.statsPaper {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.statsCard {
+  width: 100%;
+  height: 20%;
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  /* margin-bottom: 0.5em; */
+}
+
+.statsGrid {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }

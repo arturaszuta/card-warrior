@@ -7,6 +7,7 @@ import SampleStack from "./sampleReactStack";
 import SizedContainer from "./SizedContainer";
 import { Container, Grid } from "@material-ui/core";
 import  Dungeon  from "./Dungeon";
+import Character from "./CharacterTab";
 
 
 
@@ -58,6 +59,7 @@ const MainWindow = (props: any) => {
         // />
         <div className="mainWrapper">
                 <Container className="characterTab" >
+                    <Character />
                 </Container>
                 <Container className="main-game-container" maxWidth="lg" style={{ width: "160%"}}>
                     <Dungeon size="small" />
