@@ -1,9 +1,17 @@
 .stats-card-start {
     background-color: gray;
+    width: 30%;
 }
 .stats-card-icon {
     background-color: green;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 80%;
+    width: 20%;
+    border-radius: 1000px;
 }
 .stats-card-text {
     background-color: greenyellow;
+    width: 70%;
 }

@@ -169,6 +169,11 @@ cursor: not-allowed;
   border: 0.5px solid gray;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 !important;
+  overflow: hidden;
   /* margin-bottom: 0.5em; */
 }
 
