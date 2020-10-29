@@ -1,12 +1,14 @@
 import React from "react"
-import { Grid } from "@material-ui/core"
+import { Grid, SvgIcon } from "@material-ui/core"
 import  "../CSS/cards.css"
 
-const StatsCard = () => {
+const StatsCard = (props:any) => {
+
+    const { text, icon } = props;
     return(
         <Grid item className="statsCard">
-            <div className="stats-card-start">a</div>
-            <div className="stats-card-icon">b</div>
+            <div className="stats-card-start">{text}</div>
+            <div className="stats-card-icon">{icon}</div>
             <div className="stats-card-text">c</div>
         </Grid>
     )
