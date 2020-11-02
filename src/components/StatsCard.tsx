@@ -4,7 +4,20 @@ import  "../CSS/cards.css"
 
 const StatsCard = (props:any) => {
 
-    const { text, icon } = props;
+    const { text, icon, type, data } = props;
+
+    const contentBuilder = (type: string, data: any) => {
+        if (type == "hp") {
+            //do something
+        }
+        if (type == "dmg") {
+            //do something
+        }
+        if (type == "def") {
+            //do something
+        }
+    }
+
     return(
         <Grid item className="statsCard">
             <div className="stats-card-start">{text}</div>
