@@ -9,7 +9,7 @@ const StatsCard = (props:any) => {
         <Grid item className="statsCard">
             <div className="stats-card-start">{text}</div>
             <div className="stats-card-icon">{icon}</div>
-            <div className="stats-card-text">c</div>
+            <div className="stats-card-text"></div>
         </Grid>
     )
 }

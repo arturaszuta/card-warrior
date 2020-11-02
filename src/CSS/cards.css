@@ -1,5 +1,5 @@
 .stats-card-start {
-    background-color: gray;
+    background-color: lightsteelblue;
     width: 30%;
     display: flex;
     justify-content: center;
@@ -20,9 +20,13 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    border: 1px solid lightsteelblue;
     
 }
 .stats-card-text {
-    background-color: greenyellow;
     width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
