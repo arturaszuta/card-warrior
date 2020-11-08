@@ -9,9 +9,8 @@ const StatsCard = (props:any) => {
     const contentBuilder = (type: string, data: any) => {
         if (type == "hp") {
             return (
-                [
-                    <div>{data.hp}</div>,
-                    <div>{data.maxhp}</div>,
+                [   <div className="hp-container"><div className="hp">{data.hp}</div>
+                    <div className="max-hp">{data.maxhp}</div></div>,
                     <div>{data.regen}</div>,
                 ]
             )

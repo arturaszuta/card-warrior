@@ -30,3 +30,33 @@
     flex-direction: row;
     align-items: center;
 }
+
+.hp-container {
+    width: 45px;
+    position: relative;
+    background: 
+        linear-gradient(to top left,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 0.8px),
+            rgba(0,0,0,1) 50%,
+            rgba(0,0,0,0) calc(50% + 0.8px),
+            rgba(0,0,0,0) 100%)
+        /* linear-gradient(to top right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0) calc(50% - 0.8px),
+            rgba(0,0,0,1) 50%,
+            rgba(0,0,0,0) calc(50% + 0.8px),
+            rgba(0,0,0,0) 100%); */
+}
+
+.hp {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.max-hp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
