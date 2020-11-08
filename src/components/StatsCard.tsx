@@ -8,7 +8,13 @@ const StatsCard = (props:any) => {
 
     const contentBuilder = (type: string, data: any) => {
         if (type == "hp") {
-            //do something
+            return (
+                [
+                    <div>{data.hp}</div>,
+                    <div>{data.maxhp}</div>,
+                    <div>{data.regen}</div>,
+                ]
+            )
         }
         if (type == "dmg") {
             //do something
@@ -22,7 +28,7 @@ const StatsCard = (props:any) => {
         <Grid item className="statsCard">
             <div className="stats-card-start">{text}</div>
             <div className="stats-card-icon">{icon}</div>
-            <div className="stats-card-text"></div>
+            <div className="stats-card-text">{contentBuilder(type, data)}</div>
         </Grid>
     )
 }
