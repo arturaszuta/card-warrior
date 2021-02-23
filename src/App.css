@@ -157,6 +157,11 @@ cursor: not-allowed;
   height: 400px;
 }
 
+.skillsContainer {
+  width: 100%;
+  height: 75px;
+}
+
 .statsPaper {
   width: 100%;
   height: 100%;
