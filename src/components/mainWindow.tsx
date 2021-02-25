@@ -23,40 +23,6 @@ const MainWindow = (props: any) => {
 
 
     return(
-        // <ReactFullPage
-        //     //fullpage options
-        //     licenseKey = {'YOUR_KEY_HERE'}
-        //     scrollingSpeed = {1000} /* Options here */
-
-        //     render={({ state, fullpageApi }) => {
-        //     return (
-        //         <ReactFullPage.Wrapper>
-        //         <div className="section">
-        //             <GameMenu moveDown={() => {fullpageApi.moveSectionDown(); fullpageApi.setAllowScrolling(false, 'up'); fullpageApi.setKeyboardScrolling(false);}}/>
-        //         </div>
-        //         <div className="section">
-        //             <div className="slide cardArea">
-        //                 <button onClick={() => fullpageApi.moveSlideRight()}>Go to game area</button>
-        //                 <button onClick={() => fullpageApi.moveSectionDown()}>Go to game area</button>
-        //                     <div className="cardAreaWrapper">
-        //                         <SizedContainer>
-        //                         </SizedContainer>
-        //                             {/* <SampleStack /> */}
-        //                     </div>
-        //             </div>
-        //             <div className="slide">
-        //                 <button onClick={() => fullpageApi.moveSlideLeft()}>Go to staging area</button>
-        //                 Game Area
-        //             </div>
-        //         </div>
-        //         {/* <div className="section">
-        //             This is section?
-        //         </div> */}
-
-        //         </ReactFullPage.Wrapper>
-        //     );
-        //     }}
-        // />
         <div className="mainWrapper">
                 <Container className="characterTab" >
                     <Character />
