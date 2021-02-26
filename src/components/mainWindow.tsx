@@ -13,14 +13,6 @@ import Character from "./CharacterTab";
 
 
 const MainWindow = (props: any) => {
-    const  doMagic = (fullpageApi: any) => {
-        fullpageApi.silentMoveTo(1)
-        // return <div className="section">Oh lalala</div>
-    }
-
-
-
-
 
     return(
         <div className="mainWrapper">
