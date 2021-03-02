@@ -34,7 +34,7 @@ const mapStateToProps = (state: any /*, ownProps*/) => {
         sayHello: state
     }
 }
-
+// Comments
 export default connect(
     mapStateToProps,
   )(MainWindow)
