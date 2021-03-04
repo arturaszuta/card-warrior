@@ -36,6 +36,7 @@ const mapStateToProps = (state: any /*, ownProps*/) => {
 }
 // Comments
 // more comments
+//MORE COMMENTS
 export default connect(
     mapStateToProps,
   )(MainWindow)
